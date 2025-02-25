@@ -1,0 +1,3 @@
+/home/jolan/Student-Management-System/build/CMakeFiles/StudentManagementSystem.dir
+/home/jolan/Student-Management-System/build/CMakeFiles/edit_cache.dir
+/home/jolan/Student-Management-System/build/CMakeFiles/rebuild_cache.dir
