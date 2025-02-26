@@ -201,30 +201,6 @@ src/Enrollment.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManagementSystem.dir/build.make CMakeFiles/StudentManagementSystem.dir/src/Enrollment.cpp.s
 .PHONY : src/Enrollment.cpp.s
 
-src/GraduateStudent.o: src/GraduateStudent.cpp.o
-.PHONY : src/GraduateStudent.o
-
-# target to build an object file
-src/GraduateStudent.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManagementSystem.dir/build.make CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o
-.PHONY : src/GraduateStudent.cpp.o
-
-src/GraduateStudent.i: src/GraduateStudent.cpp.i
-.PHONY : src/GraduateStudent.i
-
-# target to preprocess a source file
-src/GraduateStudent.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManagementSystem.dir/build.make CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.i
-.PHONY : src/GraduateStudent.cpp.i
-
-src/GraduateStudent.s: src/GraduateStudent.cpp.s
-.PHONY : src/GraduateStudent.s
-
-# target to generate assembly for a file
-src/GraduateStudent.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManagementSystem.dir/build.make CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.s
-.PHONY : src/GraduateStudent.cpp.s
-
 src/Person.o: src/Person.cpp.o
 .PHONY : src/Person.o
 
@@ -297,30 +273,6 @@ src/Student.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManagementSystem.dir/build.make CMakeFiles/StudentManagementSystem.dir/src/Student.cpp.s
 .PHONY : src/Student.cpp.s
 
-src/UndergaduateStudent.o: src/UndergaduateStudent.cpp.o
-.PHONY : src/UndergaduateStudent.o
-
-# target to build an object file
-src/UndergaduateStudent.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManagementSystem.dir/build.make CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o
-.PHONY : src/UndergaduateStudent.cpp.o
-
-src/UndergaduateStudent.i: src/UndergaduateStudent.cpp.i
-.PHONY : src/UndergaduateStudent.i
-
-# target to preprocess a source file
-src/UndergaduateStudent.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManagementSystem.dir/build.make CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.i
-.PHONY : src/UndergaduateStudent.cpp.i
-
-src/UndergaduateStudent.s: src/UndergaduateStudent.cpp.s
-.PHONY : src/UndergaduateStudent.s
-
-# target to generate assembly for a file
-src/UndergaduateStudent.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/StudentManagementSystem.dir/build.make CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.s
-.PHONY : src/UndergaduateStudent.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -363,9 +315,6 @@ help:
 	@echo "... src/Enrollment.o"
 	@echo "... src/Enrollment.i"
 	@echo "... src/Enrollment.s"
-	@echo "... src/GraduateStudent.o"
-	@echo "... src/GraduateStudent.i"
-	@echo "... src/GraduateStudent.s"
 	@echo "... src/Person.o"
 	@echo "... src/Person.i"
 	@echo "... src/Person.s"
@@ -375,9 +324,6 @@ help:
 	@echo "... src/Student.o"
 	@echo "... src/Student.i"
 	@echo "... src/Student.s"
-	@echo "... src/UndergaduateStudent.o"
-	@echo "... src/UndergaduateStudent.i"
-	@echo "... src/UndergaduateStudent.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

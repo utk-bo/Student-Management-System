@@ -125,38 +125,10 @@ CMakeFiles/StudentManagementSystem.dir/src/Student.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StudentManagementSystem.dir/src/Student.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jolan/Student-Management-System/src/Student.cpp -o CMakeFiles/StudentManagementSystem.dir/src/Student.cpp.s
 
-CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o: CMakeFiles/StudentManagementSystem.dir/flags.make
-CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o: /home/jolan/Student-Management-System/src/UndergaduateStudent.cpp
-CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o: CMakeFiles/StudentManagementSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o -MF CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o.d -o CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o -c /home/jolan/Student-Management-System/src/UndergaduateStudent.cpp
-
-CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jolan/Student-Management-System/src/UndergaduateStudent.cpp > CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.i
-
-CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jolan/Student-Management-System/src/UndergaduateStudent.cpp -o CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.s
-
-CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o: CMakeFiles/StudentManagementSystem.dir/flags.make
-CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o: /home/jolan/Student-Management-System/src/GraduateStudent.cpp
-CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o: CMakeFiles/StudentManagementSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o -MF CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o.d -o CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o -c /home/jolan/Student-Management-System/src/GraduateStudent.cpp
-
-CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jolan/Student-Management-System/src/GraduateStudent.cpp > CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.i
-
-CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jolan/Student-Management-System/src/GraduateStudent.cpp -o CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.s
-
 CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o: CMakeFiles/StudentManagementSystem.dir/flags.make
 CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o: /home/jolan/Student-Management-System/src/Professor.cpp
 CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o: CMakeFiles/StudentManagementSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o -MF CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o.d -o CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o -c /home/jolan/Student-Management-System/src/Professor.cpp
 
 CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.i: cmake_force
@@ -170,7 +142,7 @@ CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.s: cmake_force
 CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o: CMakeFiles/StudentManagementSystem.dir/flags.make
 CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o: /home/jolan/Student-Management-System/src/Person.cpp
 CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o: CMakeFiles/StudentManagementSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o -MF CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o.d -o CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o -c /home/jolan/Student-Management-System/src/Person.cpp
 
 CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.i: cmake_force
@@ -184,7 +156,7 @@ CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.s: cmake_force
 CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o: CMakeFiles/StudentManagementSystem.dir/flags.make
 CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o: /home/jolan/Student-Management-System/src/API.cpp
 CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o: CMakeFiles/StudentManagementSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o -MF CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o.d -o CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o -c /home/jolan/Student-Management-System/src/API.cpp
 
 CMakeFiles/StudentManagementSystem.dir/src/API.cpp.i: cmake_force
@@ -201,8 +173,6 @@ StudentManagementSystem_OBJECTS = \
 "CMakeFiles/StudentManagementSystem.dir/src/Course.cpp.o" \
 "CMakeFiles/StudentManagementSystem.dir/src/Enrollment.cpp.o" \
 "CMakeFiles/StudentManagementSystem.dir/src/Student.cpp.o" \
-"CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o" \
-"CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o" \
 "CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o" \
 "CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o" \
 "CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o"
@@ -214,14 +184,12 @@ StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/src/main.cpp.o
 StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/src/Course.cpp.o
 StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/src/Enrollment.cpp.o
 StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/src/Student.cpp.o
-StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/src/UndergaduateStudent.cpp.o
-StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/src/GraduateStudent.cpp.o
 StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/src/Professor.cpp.o
 StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/src/Person.cpp.o
 StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o
 StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/build.make
 StudentManagementSystem: CMakeFiles/StudentManagementSystem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable StudentManagementSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jolan/Student-Management-System/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable StudentManagementSystem"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/StudentManagementSystem.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
