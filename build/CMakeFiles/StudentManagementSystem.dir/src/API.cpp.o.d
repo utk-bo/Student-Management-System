@@ -844,4 +844,9 @@ CMakeFiles/StudentManagementSystem.dir/src/API.cpp.o: \
  /usr/include/c++/14/bits/gslice_array.h \
  /usr/include/c++/14/bits/mask_array.h \
  /usr/include/c++/14/bits/indirect_array.h /usr/include/c++/14/optional \
- /home/jolan/Student-Management-System/includes/Professor.h
+ /home/jolan/Student-Management-System/includes/Professor.h \
+ /home/jolan/Student-Management-System/includes/Course.h \
+ /home/jolan/Student-Management-System/includes/Student.h \
+ /home/jolan/Student-Management-System/includes/Professor.h \
+ /home/jolan/Student-Management-System/includes/Enrollment.h \
+ /home/jolan/Student-Management-System/includes/Course.h
