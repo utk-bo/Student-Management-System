@@ -33,6 +33,32 @@ void API::APIStart() {
             /api/professors      -> Ajouter un professeur -> {Name: <Nom>, Age: <age>}
             /api/courses         -> Ajouter un cours -> {courseCode: "<Code du cours>", courseName: "<Nom du cours>", creditHours: <Nombre de crédits>}
             /api/enrollments     -> Enregistrer un étudiant ou un professeur à un cours -> {"who": "Professor" or "Student", "courseCode": "<CourseCode>", "name": "<Name>", "age": "<Age>"}
+            
+            
+            curl -X GET http://localhost:8080/api
+
+            curl -X GET http://localhost:8080/api/students
+
+            curl -X GET http://localhost18080/api/professors
+
+            curl -X GET http://localhost:8080/api/courses
+
+            curl -X GET http://localhost:8080/api/students/{id}
+
+            curl -X GET http://localhost:8080/api/professors/{id}
+
+            curl -X GET http://localhost:8080/api/courses/{id}
+
+            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"Name": "Dr. Smith", "age": 45}' http://localhost:8080/api/professors
+
+            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"Name": "John Doe", "age": 20, "grades": [85.5, 90.0, 88.0]}' http://localhost:8080/api/students
+
+            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"courseCode": "CS101", "courseName": "Introduction to Computer Science", "creditHours": 3}' http://localhost:8080/api/courses
+
+            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"who": "Student", "courseCode": "CS101", "name": "John Doe", "age": 20}' http://localhost:8080/api/enroll
+
+            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"who": "Professor", "courseCode": "CS101", "name": "Dr. Smith", "age": 45}' http://localhost:8080/api/enroll
+
         )";
     });
     
@@ -109,7 +135,11 @@ void API::APIStart() {
         return response;
     });
 
-    CROW_ROUTE(app, "/api/professors").methods("POST"_method)([](const crow::request& req) {
+    CROW_ROUTE(app, "/api/professors").methods("POST"_method)([this](const crow::request& req) {
+        auto apikey = req.get_header_value("ApiKey");
+        if (apikey != getApiKeys()) {
+            return crow::response(403, "Forbidden: Invalid API Key");
+        }
 
         auto data = crow::json::load(req.body);
       
@@ -150,7 +180,11 @@ void API::APIStart() {
         return response;
     });
     
-    CROW_ROUTE(app, "/api/courses").methods("POST"_method)([](const crow::request& req) {
+    CROW_ROUTE(app, "/api/courses").methods("POST"_method)([this](const crow::request& req) {
+        auto apikey = req.get_header_value("ApiKey");
+        if (apikey != getApiKeys()) {
+            return crow::response(403, "Forbidden: Invalid API Key");
+        }
    
         auto data = crow::json::load(req.body);
         
@@ -172,7 +206,16 @@ void API::APIStart() {
 
 
     /////////////////////////////////////// enroll student or professor //////////////////////////////////////
-    CROW_ROUTE(app, "/api/enroll").methods("POST"_method)([](const crow::request& req) {
+    CROW_ROUTE(app, "/api/enroll").methods("POST"_method)([this](const crow::request& req) {
+
+        
+        
+        auto apikey = req.get_header_value("ApiKey");
+        if (apikey != getApiKeys()) {
+            return crow::response(403, "Forbidden: Invalid API Key");
+        }
+        
+        
         auto data = crow::json::load(req.body);
         if (!data) {
             return crow::response(400);
@@ -207,7 +250,6 @@ void API::APIStart() {
         
     });
       
-   
 }
 
 
