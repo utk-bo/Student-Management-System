@@ -25,18 +25,24 @@ int main() {
     Professor prof1("Dr. Smith", 77);
     Professor prof2("Prof. Johnson", 54);
 
-  
-    Course course1("CS101", "Introduction to Programming", 3);
+    Course course3("CS101", "Introduction to NETWORK", 35);
+    Course course2("CS101", "Introduction to FORENSIC", 60);
+    Course course1("CS101", "Introduction to Programming", 30);
+    course1.enrollStudent(C);
     course1.enrollStudent(B);
-    course1.enrollStudent(A);
     course1.enrollProfessor(prof1);
     course1.enrollProfessor(prof2);
 
 
+    course2.enrollStudent(B);
+    course2.enrollStudent(A);
+    course2.enrollProfessor(zz);
+    course2.enrollProfessor(dd);
 
 
 
-    A.AddGrades(0.5);
+
+
     
 
 

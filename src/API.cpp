@@ -66,13 +66,16 @@ void API::APIStart() {
 
     CROW_ROUTE(app, "/api/students/<int>").methods("GET"_method)([this](int id) {
         Student* student = Student::getStudentById(id);
+        if (!student) {
+            return crow::response(404, "no course with this id");
+        }
         auto response = crow::response(200);
         response.set_header("Content-Type", "application/json");
         response.write(student->toJson().dump(4));
         return response;
     });
 
-    CROW_ROUTE(app, "/api/students")([](){
+    CROW_ROUTE(app, "/api/students").methods("GET"_method)([](){
 
         nlohmann::json students_json;
         
@@ -115,14 +118,17 @@ void API::APIStart() {
     });
     
     CROW_ROUTE(app, "/api/professors/<int>").methods("GET"_method)([] (int id) {
-        auto prof = Professor::getProfessorById(id);
+        Professor* prof = Professor::getProfessorById(id);
+        if (!prof) {
+            return crow::response(404, "no course with this id");
+        }
         auto response = crow::response(200);
         response.set_header("Content-Type", "application/json");
         response.write(prof->toJson().dump(4));
         return response;
     });
 
-    CROW_ROUTE(app, "/api/professors")([](){
+    CROW_ROUTE(app, "/api/professors").methods("GET"_method)([](){
         nlohmann::json professor_json;
         
         for (const auto& prof : Professor::getAllProfessor()) {    
@@ -160,14 +166,17 @@ void API::APIStart() {
 
 
     CROW_ROUTE(app, "/api/courses/<int>").methods("GET"_method)([] (int id) {
-        auto student = Course::getCourseById(id);
+        Course* course = Course::getCourseById(id);
+        if (!course) {
+            return crow::response(404, "no course with this id");
+        }
         auto response = crow::response(200);
         response.set_header("Content-Type", "application/json");
-        response.write(student->toJson().dump(4));
+        response.write(course->toJson().dump(4));
         return response;
     });
 
-    CROW_ROUTE(app, "/api/courses")([](){
+    CROW_ROUTE(app, "/api/courses").methods("GET"_method)([](){
         nlohmann::json courses_json;
         
         for (const auto& course : Course::getAllCourse()) {    
@@ -251,12 +260,3 @@ void API::APIStart() {
     });
       
 }
-
-
-/*
-✔ POST /students – Create a new student.            ✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔
-✔ POST /courses – Create a new course.               ✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔
-✔ POST /enrollments – Enroll a student in a course.   ✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔
-✔ GET /students/{id} – Retrieve a student’s details.   ✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔
-✔ GET /courses/{id} – Retrieve course details including enrolled students.  ✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔✔
-*/

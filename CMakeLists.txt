@@ -20,8 +20,6 @@ add_executable(StudentManagementSystem
     src/Course.cpp
     src/Enrollment.cpp
     src/Student.cpp
-    src/UndergaduateStudent.cpp
-    src/GraduateStudent.cpp
     src/Professor.cpp
     src/Person.cpp
     src/API.cpp

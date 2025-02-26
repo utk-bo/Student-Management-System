@@ -38,17 +38,9 @@ Student* Student::getStudentById(int id) {
 }
 
 void Student::AddGrades(float grade) {
-    cout << "Adding grade: " << grade << endl;  // Vérification dans le terminal
     gradesList.push_back(grade);
-    for (auto grade : gradesList) {
-        cout << grade << endl;
-    }
     
 }
-
-
-
-
 
 double Student::getAverageGrade() const {
     if (gradesList.empty()) {
