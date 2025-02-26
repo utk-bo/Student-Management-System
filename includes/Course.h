@@ -12,29 +12,39 @@ using namespace std;
 
 class Course {
     private:
-        string courseCode;
+        static int nextID; 
+        int courseId;
         string courseName;
+        string courseCode;
         int creditHours;
-        vector<Student> studentsList;   // plus léger que list et permet l'accés au valeur par index
-        vector<Professor> professorList;  
+
+        static list<Course> courseList;
+        list<string> enrolledStudentsList;   
+        list<string> enrolledProfessorList;  
 
     public:
         Course(string courseCode, string courseName, int creditHour);
 
-        string getCourseName() {
-            return this->courseName;
-        };
-        string getCourseCode() {
-            return this->courseCode;
-        };
-        int getCreditHours() {
-            return this->creditHours;
-        };
+        int getCourseID() const;
+        string getCourseName() const;
+        string getCourseCode() const;
+        int getCreditHours() const;
+
+        static Course* getCourseByCode(const string& courseCode);
+
+        static list<Course>& getAllCourse();
+
+        json toJson() const;   
+
+        static Course* getCourseById(int id);
         
+        void enrollProfessor(const Professor& professor);         // ajoute un etudiant directement sans 
 
+        list<string> getEnrolledProfessor() const;   // methode pour voir la list des étudiant du cours 
 
-        void enrollStudent(Student Student);         // ajoute un etudiant directement sans 
-        vector<Student> getEnrollerdStudents();   // methode pour voir la list des étudiant du cours 
+        void enrollStudent(const Student& Student);         // ajoute un etudiant directement sans 
+
+        list<string> getEnrollerdStudents() const;   // methode pour voir la list des étudiant du cours 
 };
 
 

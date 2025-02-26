@@ -1,24 +1,20 @@
-#include "Student.h" // implémentation de la classe Student
-#include "Person.h"
-#include <string>   // Pour std::string
-#include <list>    // pour les lists
+#include "Student.h"  // implement Student class
+#include "Person.h"    // implement Person class
+#include <string>
+#include <list>
 #include <vector>
-
+#include <nlohmann/json.hpp>      // librairy for json data 
 
 using namespace std;
 
-
 list<Student> Student::studentList;
 
-int Student::nextID = 1;
+int Student::nextID = 0;         // counter for studentID
 
-Student::Student(string name, int age) : Person(name, age) {
+Student::Student(string name, int age, vector<float> gradesList) : Person(name, age), gradesList(gradesList) {
     this->StudentID = nextID++;
     studentList.push_back(*this);
-    this->gradesList = gradesList;
-    
-};
-
+}
 
 int Student::getStudentID() const {
     return  this->StudentID;
@@ -26,6 +22,10 @@ int Student::getStudentID() const {
 
 list<Student>& Student::getAllStudents() {
     return studentList;
+}
+
+const vector<float>& Student::getAllGradesStudent(const Student& student) {
+    return student.gradesList;
 }
 
 Student* Student::getStudentById(int id) {
@@ -37,53 +37,47 @@ Student* Student::getStudentById(int id) {
     return nullptr;
 }
 
-
-
-void Student::AddGrades(double grade) {
+void Student::AddGrades(float grade) {
+    cout << "Adding grade: " << grade << endl;  // Vérification dans le terminal
     gradesList.push_back(grade);
-    cout << "Grade added: " << grade << " for student ID " << getStudentID() << endl;
-}
-
-
-const vector<float> Student::getAllGradesStudent() const {
-    return gradesList;  
-}
-
-
-
-
-double Student::getAverageGrade() const {      //calcule la moyen des notes de l'éléves
-    if (gradesList.empty()) {
-        return 0.0;
-    } else {
-        double sumGrades;
-        for (double g : gradesList) { 
-            sumGrades += g;
-        }
-        
-        return (sumGrades / gradesList.size());
-        
+    for (auto grade : gradesList) {
+        cout << grade << endl;
     }
     
 }
 
+
+
+
+
+double Student::getAverageGrade() const {
+    if (gradesList.empty()) {
+        return 0.0;
+    } else {
+        double sumGrades = 0;
+        for (double g : gradesList) {
+            sumGrades += g;
+        }
+        double average = sumGrades / gradesList.size();
+        return round(average * 100) / 100;  
+    }
+}
+
 string Student::getStatus() const {
-    return "Student";
-};
+    return (getName() + ",  " +  to_string(getAge()) + "years old,"+ " ,Id : " + to_string(getStudentID()));
+}
 
 void Student::printInfo() const {
-    cout << "ID : " << getStudentID() << ", Student: " << getName() << ", Âge: " << getAge() << endl;
+    cout << "ID : " << getStudentID() << ", Student: " << getName() << ", Age: " << getAge() << endl;
 }
 
 json Student::toJson() const {
     nlohmann::json j;
-
-    
-    j["Id"] = this->StudentID;
+    j["StudentId"] = this->getStudentID();
     j["Name"] = this->getName();
-    j["Age"] = this->getAge();
+    j["age"] = this->getAge();
+    j["averageGrade"] = this->getAverageGrade();
+    j["grades"] = this->gradesList;
     
-    j["grades"] = gradesList;
     return j;
 }
-

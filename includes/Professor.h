@@ -1,7 +1,10 @@
-#ifndef PROFESSSOR_H
+#ifndef PROFESSOR_H
 #define PROFESSOR_H
 
 #include "Person.h"
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 
 #include <string>   // Pour std::string
@@ -12,13 +15,20 @@ using namespace std;
 
 class Professor : public Person {
     private:
+        static int nextID;
         int professorID;
         static list <Professor> professorList;
        
     public:
-        Professor(int professorID, string name, int age);
+        Professor(string name, int age);
 
         int getProfessorID() const;
+
+        json toJson() const;   
+
+        static list<Professor>& getAllProfessor();  // return a list of all professor
+
+        static Professor* getProfessorById(int id);
     
       
 

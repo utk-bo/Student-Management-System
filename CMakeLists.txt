@@ -11,11 +11,7 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(${PROJECT_SOURCE_DIR}/crow/include/)
 include_directories(${PROJECT_SOURCE_DIR}/crow/include/crow)
 
-include_directories(${PROJECT_SOURCE_DIR}/include_json/)
 
-
-
-# Inclure le dossier avec les en-têtes de ton projet (par exemple, includes/)
 include_directories(${PROJECT_SOURCE_DIR}/includes)
 
 # Ajouter les fichiers source
