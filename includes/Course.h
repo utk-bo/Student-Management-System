@@ -30,13 +30,13 @@ class Course {
         string getCourseCode() const;
         int getCreditHours() const;
 
-        static Course* getCourseByCode(const string& courseCode);
+        static const Course* getCourseByCode(const string& courseCode);
 
         static list<Course>& getAllCourse();
 
         json toJson() const;   
 
-        static Course* getCourseById(int id);
+        static const Course* getCourseById(int id);
         
         void enrollProfessor(const Professor& professor);         // ajoute un etudiant directement sans 
 

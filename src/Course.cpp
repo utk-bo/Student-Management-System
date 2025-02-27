@@ -21,7 +21,7 @@ Course::Course(string courseCode, string courseName, int creditHours) {
 }
 
 
-Course* Course::getCourseById(int id) {
+const Course* Course::getCourseById(int id) {
     for (auto& course : courseList) {
         if (course.getCourseID() == id) {
             return &course;
@@ -30,7 +30,7 @@ Course* Course::getCourseById(int id) {
     return nullptr;
 }
 
-Course* Course::getCourseByCode(const string& courseCode) {
+const Course* Course::getCourseByCode(const string& courseCode) {
     for (auto& course : courseList) {
         if (course.getCourseCode() == courseCode) {
             return &course;
