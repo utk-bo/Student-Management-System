@@ -17,7 +17,7 @@ class Professor : public Person {
     private:
         static int nextID;
         int professorID;
-        static list <Professor> professorList;
+        static list<Professor> professorList;
        
     public:
         Professor(string name, int age);

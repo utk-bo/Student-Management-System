@@ -39,11 +39,11 @@ curl -X POST -H "ApiKey: $API_KEY" -d '{"Name": "John Doe", "age": 20, "grades":
 sleep 2
 
 echo "POST /api/courses"
-curl -X POST -H "ApiKey: $API_KEY" -d '{"courseCode": "CS101", "courseName": "Introduction to Computer Science", "creditHours": 3}' http://localhost:8080/api/courses
+curl -X POST -H "ApiKey: $API_KEY" -d '{"courseCode": "IT101", "courseName": "Introduction to Computer Science", "creditHours": 3}' http://localhost:8080/api/courses
 sleep 2
 
 echo "POST /api/enroll (Student)"
-curl -X POST -H "ApiKey: $API_KEY" -d '{"who": "Student", "courseCode": "CS101", "name": "John Doe", "age": 20}' http://localhost:8080/api/enroll
+curl -X POST -H "ApiKey: $API_KEY" -d '{"who": "Student", "courseCode": "IT101", "name": "John Doe", "age": 20}' http://localhost:8080/api/enroll
 sleep 2
 
 echo "POST /api/enroll (Professor)"
@@ -55,11 +55,11 @@ curl -X POST -H "ApiKey: $API_KEY" -d '{"Name": "Dr. Johnson", "age": 50}' http:
 sleep 2
 
 echo "POST /api/students (new student)"
-curl -X POST -H "ApiKey: $API_KEY" -d '{"Name": "Alice Wonder", "age": 22, "grades": [92.5, 88.0, 95.0]}' http://localhost:8080/api/students
+curl -X POST -H "ApiKey: $API_KEY" -d '{"Name": "Alice Wonder", "age": 22, "grades": [2.5, 8.0, 9.0]}' http://localhost:8080/api/students
 sleep 2
 
 echo "POST /api/courses (new course)"
-curl -X POST -H "ApiKey: $API_KEY" -d '{"courseCode": "CS102", "courseName": "Data Structures", "creditHours": 4}' http://localhost:8080/api/courses
+curl -X POST -H "ApiKey: $API_KEY" -d '{"courseCode": "DATA101", "courseName": "Data Structures", "creditHours": 4}' http://localhost:8080/api/courses
 sleep 2
 
 echo "GET /api/students"

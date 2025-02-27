@@ -3,7 +3,13 @@
 
 pour lancer l'api aller dans /build et executer ./StudentManagementSystem
 
-#apikeys ====>  5fvfb65r4h5ht54dhvvFB54hth5hytKHB54551650
+#API_SECRET_KEY ====>  5fvfb65r4h5ht54dhvvFB54hth5hytKHB54551650 
+
+export API_SECRET_KEY="5fvfb65r4h5ht54dhvvFB54hth5hytKHB54551650"  entrez cette commande dans un terminal bash 
+
+echo $API_SECRET_KEY renverra 5fvfb65r4h5ht54dhvvFB54hth5hytKHB54551650
+
+cela permet que la clef api ne soit pas dans le code source mais sur le serveur qui heberge l'api
 
 ensuit vous pourrez faire toute les requête suivantes:
 

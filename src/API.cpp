@@ -10,55 +10,26 @@
 
 extern crow::SimpleApp app;
 
+json API::getHomemessage() const {
+    return this->homemessage;
+}
+
 string API::getApiKeys() const {
-    return ApiKeys;
-};
+    const char* apiKey = getenv("API_SECRET_KEY");
+    if (apiKey != nullptr) {
+        return string(apiKey);
+    } else {
+        return "";
+    }
+}
 
 void API::APIStart() {
-    CROW_ROUTE(app, "/api")([](){
-        return R"(
-            Bienvenue dans mon API
-    
-            GET :
-            /api/students/<int>  -> Récupérer les informations d'un étudiant par son ID
-            /api/students        -> Récupérer la liste de tous les étudiants
-            /api/professors/<int> -> Récupérer les informations d'un professeur par son ID
-            /api/professors      -> Récupérer la liste de tous les professeurs
-            /api/courses/<int>   -> Récupérer les informations d'un cours par son ID
-            /api/courses         -> Récupérer la liste de tous les cours
-    
-            POST :
-            /api/students        -> Ajouter un étudiant -> {Name: <Nom>, Age: <age>, Grades: [<double>, <double>]}
-            /api/professors      -> Ajouter un professeur -> {Name: <Nom>, Age: <age>}
-            /api/courses         -> Ajouter un cours -> {courseCode: "<Code du cours>", courseName: "<Nom du cours>", creditHours: <Nombre de crédits>}
-            /api/enrollments     -> Enregistrer un étudiant ou un professeur à un cours -> {"who": "Professor" or "Student", "courseCode": "<CourseCode>", "name": "<Name>", "age": "<Age>"}
-            
-            
-            curl -X GET http://localhost:8080/api
-
-            curl -X GET http://localhost:8080/api/students
-
-            curl -X GET http://localhost18080/api/professors
-
-            curl -X GET http://localhost:8080/api/courses
-
-            curl -X GET http://localhost:8080/api/students/{id}
-
-            curl -X GET http://localhost:8080/api/professors/{id}
-
-            curl -X GET http://localhost:8080/api/courses/{id}
-
-            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"Name": "Dr. Smith", "age": 45}' http://localhost:8080/api/professors
-
-            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"Name": "John Doe", "age": 20, "grades": [85.5, 90.0, 88.0]}' http://localhost:8080/api/students
-
-            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"courseCode": "CS101", "courseName": "Introduction to Computer Science", "creditHours": 3}' http://localhost:8080/api/courses
-
-            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"who": "Student", "courseCode": "CS101", "name": "John Doe", "age": 20}' http://localhost:8080/api/enroll
-
-            curl -X POST -H "ApiKey: YOUR_SECRET_KEY_1" -d '{"who": "Professor", "courseCode": "CS101", "name": "Dr. Smith", "age": 45}' http://localhost:8080/api/enroll
-
-        )";
+    CROW_ROUTE(app, "/api")([this](){
+        auto response = crow::response(200);
+        response.set_header("Content-Type", "application/json");
+        response.write(getHomemessage().dump(1));
+        return response;
+        
     });
     
     
@@ -74,11 +45,11 @@ void API::APIStart() {
         return response;
     });
 
-    CROW_ROUTE(app, "/api/students").methods("GET"_method)([](){
+    CROW_ROUTE(app, "/api/students").methods("GET"_method)([](){  
 
         nlohmann::json students_json;
         
-        for (const auto& student : Student::getAllStudents()) {    
+        for (const Student& student : Student::getAllStudents()) {      //&Student est une références a students Éviter une copie de chaque student dans la boucle. // Empêcher la modification des Student dans la boucle.
             students_json.push_back(student.toJson());
         }
     
