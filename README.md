@@ -1,6 +1,6 @@
 # 🎓 Student Management System – Montpellier Ynov Campus
 
-Ce projet est un **système de gestion des étudiants** développé en POO avec une API RESTful. Il permet la gestion des étudiants, professeurs, cours, et inscriptions via une API sécurisée par une clé.
+Ce projet est un **système de gestion des étudiants** développé en POO avec une API. Il permet la gestion des étudiants, professeurs, cours, et inscriptions via une API sécurisée par une clé.
 
 ---
 
