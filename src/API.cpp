@@ -15,12 +15,7 @@ json API::getHomemessage() const {
 }
 
 string API::getApiKeys() const {
-    const char* apiKey = getenv("API_SECRET_KEY");
-    if (apiKey != nullptr) {
-        return string(apiKey);
-    } else {
-        return "";
-    }
+    return "placeholder";
 }
 
 void API::APIStart() {
